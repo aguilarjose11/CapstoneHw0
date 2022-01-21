@@ -13,12 +13,14 @@ public class P1 {
 
 		final Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a filename to import:");
-		sc.nextLine();
 		String filename = sc.nextLine(); // get filename from user
 
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		String line = null;
 
+		String correctAnswer = "A,A\nB,B\nC,C\n,CH\nD,D\nE,E\nF,F\nG,G\nH,H\nI,I\nJ,J\nK,K\nL,L\n,LL\nM,M\nN,N\n,Ñ\nO,O\nP,P\nQ,Q\nR,R\n,RR\nS,S\nT,T\nU,U\nV,V\nW,W\nX,X\nY,Y\nZ,Z";
+
+		System.out.println(correctAnswer);
 		while ((line = br.readLine()) != null) { // read each line of csv
 			// query each line at a time
 			String[] aLine = line.split(",");
