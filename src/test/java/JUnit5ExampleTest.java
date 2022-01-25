@@ -20,7 +20,8 @@ class JUnit5ExampleTest {
             assertTrue(false);
             return;
         }
-        P1.printCSV(br);
-        assertTrue(true);
+        String ret = P1.printCSV(br);
+        String correctAnswer = "A,A\nB,B\nC,C\n,CH\nD,D\nE,E\nF,F\nG,G\nH,H\nI,I\nJ,J\nK,K\nL,L\n,LL\nM,M\nN,N\n,Ñ\nO,O\nP,P\nQ,Q\nR,R\n,RR\nS,S\nT,T\nU,U\nV,V\nW,W\nX,X\nY,Y\nZ,Z";
+        assertTrue(ret.equals(correctAnswer));
     }
 }
